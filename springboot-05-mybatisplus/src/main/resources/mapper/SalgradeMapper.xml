@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bg.springboot05mybatisplus.mapper.SalgradeMapper">
+
+    <resultMap id="BaseResultMap" type="com.bg.springboot05mybatisplus.domain.Salgrade">
+            <result property="GRADE" column="GRADE" jdbcType="INTEGER"/>
+            <result property="LOSAL" column="LOSAL" jdbcType="INTEGER"/>
+            <result property="HISAL" column="HISAL" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        GRADE,LOSAL,HISAL
+    </sql>
+</mapper>
