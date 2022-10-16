@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bg.springboot04myems.mapper.DeptMapper">
+
+    <resultMap id="BaseResultMap" type="com.bg.springboot04myems.Dept">
+            <id property="DEPTNO" column="DEPTNO" jdbcType="INTEGER"/>
+            <result property="DNAME" column="DNAME" jdbcType="VARCHAR"/>
+            <result property="LOC" column="LOC" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DEPTNO,DNAME,LOC
+    </sql>
+</mapper>
