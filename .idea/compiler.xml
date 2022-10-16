@@ -11,6 +11,7 @@
         <module name="hello03" />
         <module name="springboot-01-web" />
         <module name="springboot-04-myems" />
+        <module name="springboot-05-mybatisplus" />
         <module name="hello" />
         <module name="hello_springboot" />
         <module name="springboot-02-thymeleaf" />
@@ -25,6 +26,7 @@
       <module name="springboot-02-thymeleaf" target="1.8" />
       <module name="springboot-03-ems" target="1.8" />
       <module name="springboot-04-myems" target="1.8" />
+      <module name="springboot-05-mybatisplus" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -36,6 +38,7 @@
       <module name="springboot-02-thymeleaf" options="-parameters" />
       <module name="springboot-03-ems" options="-parameters" />
       <module name="springboot-04-myems" options="-parameters" />
+      <module name="springboot-05-mybatisplus" options="-parameters" />
     </option>
   </component>
 </project>
