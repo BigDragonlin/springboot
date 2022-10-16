@@ -2,12 +2,12 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bg.springboot04myems.mapper.DeptMapper">
+<mapper namespace="com.bg.springboot03ems.mapper.DeptMapper">
 
     <resultMap id="BaseResultMap" type="com.bg.springboot03ems.domain.Dept">
-            <id property="deptno" column="DEPTNO" jdbcType="INTEGER"/>
-            <result property="dname" column="DNAME" jdbcType="VARCHAR"/>
-            <result property="loc" column="LOC" jdbcType="VARCHAR"/>
+            <id property="DEPTNO" column="DEPTNO" jdbcType="INTEGER"/>
+            <result property="DNAME" column="DNAME" jdbcType="VARCHAR"/>
+            <result property="LOC" column="LOC" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
