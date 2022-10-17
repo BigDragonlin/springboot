@@ -4,14 +4,16 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.NonRegisteringDriver
-
   thymeleaf:
     cache: false
 #  配置国际化
   messages:
     basename: i18n.login
+#  日期格式
+  mvc:
+    date-format: yyyy-MM-dd
 server:
-  port: 8081
+  port: 8085
 
 #配置mybatisplus打印输出
 mybatis-plus:

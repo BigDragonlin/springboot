@@ -52,36 +52,40 @@
 				<div th:insert="~{/common/common::sidebar(active='list.html')}"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2>Section title</h2>
-					<a class="btn btn-sm btn-danger" th:href="@{/emp/addEmp}">添加员工</a>
+					<h2>添加员工</h2>
 					<div class="table-responsive">
-						<h1 style="color: red" th:text="${msg}" th:if="${!#strings.isEmpty(msg)}"></h1>
-						<table class="table table-striped table-sm">
-							<thead>
-								<tr>
-									<th>EMPNO</th>
-									<th>ENAME</th>
-									<th>JOB</th>
-									<th>SAL</th>
-									<th>DEPT</th>
-									<th>HIREDATE</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="emp:${temps}">
-									<td th:text="${emp.getEMPNO()}"></td>
-									<td th:text="${emp.getENAME()}"></td>
-									<td th:text="${emp.getJOB()}"></td>
-									<td th:text="${emp.getSAL()}"></td>
-									<td th:text="${emp.getDEPTNO()}"></td>
-									<td th:text="${emp.getHIREDATE()}"></td>
-									<td>
-										<a class="btn btn-sm btn-primary" th:href="@{/emp/updateEmp/}+${emp.getEMPNO()}">修改</a>
-										<a class="btn btn-sm btn-danger" th:href="@{/emp/del/}+${emp.getEMPNO()}">删除</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<h3>
+
+							<p style="color: red" th:text="${addMsg}" th:if="${!#strings.isEmpty(addMsg)}"></p>
+						</h3>
+						<form th:action="@{/emp}" method="post">
+							<input type="hidden" name="_method" value="put"/>
+							<input type="hidden" name="id" >
+							<div class="form-group">
+								<label>姓名</label>
+								<input name="ENAME" type="text" class="form-control" placeholder="姓名">
+							</div>
+							<div class="form-group">
+								<label>工资</label>
+								<input name="SAL" type="number" class="form-control" placeholder="10000">
+							</div>
+							<div class="form-group">
+								<label>工作</label>
+								<input name="JOB" type="text" class="form-control" placeholder="10000">
+							</div>
+							<div class="form-group">
+								<label>雇佣日期</label><br/>
+								<input name="HIREDATE" type="date" class="form-control" >
+							</div>
+							<div class="form-group">
+								<label>部门</label>
+								<!--提交的是部门的id-->
+								<select class="form-control" name="DEPTNO">
+									<option th:each="dept:${depts}" th:value="${dept.getDEPTNO()}" th:text="${dept.getDNAME()}"></option>
+								</select>
+							</div>
+							<button type="submit" class="btn btn-primary" >添加</button>
+						</form>
 					</div>
 				</main>
 			</div>

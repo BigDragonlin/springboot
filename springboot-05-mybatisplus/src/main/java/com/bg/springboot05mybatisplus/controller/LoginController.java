@@ -28,4 +28,6 @@ public class LoginController {
         model.addAttribute("msg", "请检查账号和密码");
         return "/index";
     }
+
+    //注销
 }

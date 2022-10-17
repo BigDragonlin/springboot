@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-05-mybatisplus" />
+        <module name="springsecutity-01-hello" />
         <module name="hello" />
+        <module name="springboot-05-mybatisplus" />
         <module name="springboot-03-ems" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="springboot-03-ems" target="1.8" />
       <module name="springboot-04-myems" target="1.8" />
       <module name="springboot-05-mybatisplus" target="1.8" />
+      <module name="springsecutity-01-hello" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,6 +35,7 @@
       <module name="springboot-03-ems" options="-parameters" />
       <module name="springboot-04-myems" options="-parameters" />
       <module name="springboot-05-mybatisplus" options="-parameters" />
+      <module name="springsecutity-01-hello" options="-parameters" />
     </option>
   </component>
 </project>
