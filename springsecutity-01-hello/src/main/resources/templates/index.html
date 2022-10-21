@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,14 +18,25 @@
 
     <div class="ui segment" id="index-header-nav" th:fragment="nav-menu">
         <div class="ui secondary menu">
-            <a class="item"  th:href="@{/index}">首页</a>
+            <a class="item" th:href="@{/index}">首页</a>
 
             <!--登录注销-->
             <div class="right menu">
+
+                <div sec:authorize="isAuthenticated()">
+<!--                    <span sec:authorize="principal.username"></span>-->
+                    <a class="item" th:href="@{/logout}">
+                        <i class="address card icon"></i> 注销
+                    </a>
+                </div>
+
                 <!--未登录-->
-                <a class="item" th:href="@{/toLogin}">
-                    <i class="address card icon"></i> 登录
-                </a>
+                <div sec:authorize="!isAuthenticated()">
+                    <a class="item" th:href="@{/login}">
+                        <i class="address card icon"></i> 登录
+                    </a>
+                </div>
+
                 <!--已登录
                 <a th:href="@{/usr/toUserCenter}">
                     <i class="address card icon"></i> admin
@@ -39,7 +53,7 @@
     <div>
         <br>
         <div class="ui three column stackable grid">
-            <div class="column">
+            <div class="column" sec:authorize="hasRole('vip1')">
                 <div class="ui raised segment">
                     <div class="ui">
                         <div class="content">
@@ -54,7 +68,7 @@
             </div>
 
             <div class="column">
-                <div class="ui raised segment">
+                <div class="ui raised segment" sec:authorize="hasRole('vip2')">
                     <div class="ui">
                         <div class="content">
                             <h5 class="content">Level 2</h5>
@@ -68,7 +82,7 @@
             </div>
 
             <div class="column">
-                <div class="ui raised segment">
+                <div class="ui raised segment" sec:authorize="hasRole('vip3')">
                     <div class="ui">
                         <div class="content">
                             <h5 class="content">Level 3</h5>
@@ -83,7 +97,7 @@
 
         </div>
     </div>
-    
+
 </div>
 
 

@@ -10,12 +10,14 @@ public class RouterController {
     public String index(){
         return "/index";
     }
-
-    @RequestMapping("/toLogin")
-    public String login() {
-        return "/views/login";
+    @RequestMapping("/login")
+    public String login(){
+        return "/login";
     }
+    @RequestMapping("/logout")
+    public void logout(){
 
+    }
 
     @RequestMapping("/level1/{id}")
     public String level1(@PathVariable Integer id){

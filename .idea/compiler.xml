@@ -9,8 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springsecutity-01-hello" />
         <module name="hello" />
-        <module name="springboot-05-mybatisplus" />
+        <module name="springboot-06-redis" />
         <module name="springboot-03-ems" />
+        <module name="springboot-05-mybatisplus&amp;swagger" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,7 +22,8 @@
       <module name="springboot-02-thymeleaf" target="1.8" />
       <module name="springboot-03-ems" target="1.8" />
       <module name="springboot-04-myems" target="1.8" />
-      <module name="springboot-05-mybatisplus" target="1.8" />
+      <module name="springboot-05-mybatisplus&amp;swagger" target="1.8" />
+      <module name="springboot-06-redis" target="1.8" />
       <module name="springsecutity-01-hello" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -34,7 +36,8 @@
       <module name="springboot-02-thymeleaf" options="-parameters" />
       <module name="springboot-03-ems" options="-parameters" />
       <module name="springboot-04-myems" options="-parameters" />
-      <module name="springboot-05-mybatisplus" options="-parameters" />
+      <module name="springboot-05-mybatisplus&amp;swagger" options="-parameters" />
+      <module name="springboot-06-redis" options="-parameters" />
       <module name="springsecutity-01-hello" options="-parameters" />
     </option>
   </component>
